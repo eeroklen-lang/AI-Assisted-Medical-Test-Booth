@@ -5,12 +5,12 @@ import { backgroundImage, logoImage } from '../lib/assets';
 import { useApp } from '../context/AppContext';
 
 const tests = [
-  { id: 'blood-pressure', name: 'Blood Pressure', icon: Heart, path: '/blood-pressure' },
-  { id: 'oximeter', name: 'Oximeter', icon: Activity, path: '/oximeter' },
-  { id: 'spirometer', name: 'Spirometer', icon: Wind, path: '/spirometer/onboarding' },
-  { id: 'hba1c', name: 'HBA1C', icon: Droplet, path: '/hba1c' },
-  { id: 'haemoglobin', name: 'Haemoglobin', icon: Zap, path: '/haemoglobin' },
-  { id: 'cholesterol', name: 'Cholesterol', icon: Droplet, path: '/cholesterol' },
+  { id: 'blood-pressure', name: 'Blood Pressure', icon: Heart, path: '/blood-pressure', live: false },
+  { id: 'oximeter', name: 'Oximeter', icon: Activity, path: '/oximeter', live: false },
+  { id: 'spirometer', name: 'Spirometer', icon: Wind, path: '/spirometer/onboarding', live: true },
+  { id: 'hba1c', name: 'HBA1C', icon: Droplet, path: '/hba1c', live: false },
+  { id: 'haemoglobin', name: 'Haemoglobin', icon: Zap, path: '/haemoglobin', live: false },
+  { id: 'cholesterol', name: 'Cholesterol', icon: Droplet, path: '/cholesterol', live: false },
 ];
 
 export function LandingPage() {
@@ -59,6 +59,11 @@ export function LandingPage() {
                 <div className="flex items-center gap-8">
                   <Icon className="w-12 h-12 text-white/70 group-hover:text-white transition-colors" />
                   <span className="text-4xl text-white tracking-wide">{test.name}</span>
+                  {test.live ? (
+                    <span className="px-3 py-1 rounded-full bg-green-500/80 text-white text-lg font-medium">Live</span>
+                  ) : (
+                    <span className="px-3 py-1 rounded-full bg-white/10 text-white/50 text-lg">Coming Soon</span>
+                  )}
                 </div>
                 <motion.div
                   className="text-white/40 text-3xl"
