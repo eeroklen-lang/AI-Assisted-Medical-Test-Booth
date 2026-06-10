@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router';
+import { createHashRouter } from 'react-router';
 import { IDScan } from './pages/IDScan';
 import { Welcome } from './pages/Welcome';
 import { ConfirmDetails } from './pages/ConfirmDetails';
@@ -21,7 +21,7 @@ import { Results } from './pages/Results';
 import { Logout } from './pages/Logout';
 import bgImage from 'figma:asset/12b2a4a1b62665d755b99759e34812000a50a650.png';
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/',
     Component: IDScan,
