@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  base: '/AI-Assisted-Medical-Test-Booth/',
   plugins: [
     react(),
     tailwindcss(),
