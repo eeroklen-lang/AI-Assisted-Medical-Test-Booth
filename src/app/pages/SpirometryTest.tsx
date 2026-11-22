@@ -188,7 +188,6 @@ export function SpirometryTest() {
             {/* Stem */}
             <motion.div
               className="absolute bottom-0 w-4 h-64 rounded-full bg-white/20 border border-white/30"
-              style={{ transform: 'translateY(160px)' }}
               animate={isBlowing ? { x: [0, -4, 4, -3, 3, 0] } : {}}
               transition={{ duration: 0.3, repeat: isBlowing ? Infinity : 0 }}
             />
