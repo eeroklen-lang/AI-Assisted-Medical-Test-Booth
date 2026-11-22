@@ -51,10 +51,10 @@ export function Welcome() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.85 }}
-          className="text-center space-y-6 mb-16"
+          className="text-center space-y-4 mb-10"
         >
-          <div className="w-32 h-32 rounded-full border-2 border-white/40 flex items-center justify-center mx-auto">
-            <User className="w-16 h-16 text-white" />
+          <div className="w-24 h-24 rounded-full border-2 border-white/40 flex items-center justify-center mx-auto">
+            <User className="w-12 h-12 text-white" />
           </div>
           <h1 className="text-7xl text-white tracking-tight">Patient Identified</h1>
           <h2 className="text-6xl text-white/90">{displayName}</h2>
@@ -80,9 +80,9 @@ export function Welcome() {
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.75 + index * 0.1, duration: 0.6 }}
-              className="rounded-[1.75rem] border border-white/20 bg-white/8 p-6 backdrop-blur-sm"
+              className="rounded-[1.75rem] border border-white/20 bg-white/8 p-5 backdrop-blur-sm"
             >
-              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-white/10">
+              <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-white/10">
                 <Icon className="h-7 w-7 text-white/70" />
               </div>
               <p className="text-lg uppercase tracking-[0.2em] text-white/45">{label}</p>
@@ -95,7 +95,7 @@ export function Welcome() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.15, duration: 0.7 }}
-          className="mt-8 grid w-full max-w-6xl grid-cols-4 gap-5"
+          className="mt-6 grid w-full max-w-6xl grid-cols-4 gap-5"
         >
           {[
             { label: 'Scan Source', value: scan.source },

@@ -2,6 +2,21 @@
 @import './tailwind.css';
 @import './theme.css';
 
-html {
-  zoom: 0.8;
+/*
+ * The app is rendered on a scaled kiosk canvas (see app/components/KioskViewport.tsx).
+ * Inside it, "screen" means the canvas, not the browser window, so remap the
+ * Tailwind screen-height utilities to the canvas height. Unlayered rules win
+ * over Tailwind's utilities layer.
+ */
+html,
+body {
+  overflow: hidden;
+}
+
+.h-screen {
+  height: var(--kiosk-height, 100vh);
+}
+
+.min-h-screen {
+  min-height: var(--kiosk-height, 100vh);
 }

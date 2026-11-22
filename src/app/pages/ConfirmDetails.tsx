@@ -65,7 +65,7 @@ export function ConfirmDetails() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="grid w-full max-w-6xl grid-cols-2 gap-8"
+            className="grid w-full max-w-6xl grid-cols-2 gap-6"
           >
             {[
               { label: 'Full Name', value: `${details.first_name} ${details.last_name}`.trim(), icon: UserRound },
@@ -86,9 +86,9 @@ export function ConfirmDetails() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -32 : 32 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 + index * 0.07, duration: 0.6 }}
-                className="rounded-[2rem] border border-white/20 bg-white/8 p-8 backdrop-blur-sm"
+                className="rounded-[2rem] border border-white/20 bg-white/8 p-6 backdrop-blur-sm"
               >
-                <div className="mb-6 flex items-center gap-5">
+                <div className="flex items-center gap-5">
                   <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white/20 bg-white/10">
                     <Icon className="h-8 w-8 text-white/75" />
                   </div>
